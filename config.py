@@ -1,3 +1,5 @@
+"""Configurações necessarias"""
+
 from marvel import Marvel
 from keys import PUBLIC_KEY, PRIVATE_KEY
 

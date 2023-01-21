@@ -1,3 +1,5 @@
+"""Classes necessarias"""
+
 from main import db
 
 class Hero(object):

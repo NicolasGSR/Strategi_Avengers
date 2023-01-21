@@ -1,3 +1,5 @@
+"""Rotas"""
+
 from flask import render_template, request, redirect
 from main import app, db
 from classes import Hero, Selecao, Vingadores, Equipe

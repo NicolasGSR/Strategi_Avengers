@@ -1,3 +1,5 @@
+"""Script para criação do banco de dados necessario"""
+
 import mysql.connector
 from mysql.connector import errorcode
 
