@@ -1,4 +1,7 @@
-"""Spreadsheet Column Printer
+"""Nome: Strategi Avengers
+Descrição: Webapp para a seleção da empresa Strategi Consultoria.
+Um webapp que disponibiliza uma lista de herois através da MarvelAPI, e permite a seleção desses 
+herois e divisão dos mesmo em equipes.
 """
 
 from flask import Flask #Importando flask
