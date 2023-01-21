@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>New avengers project</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='mystyle.css') }}">
+    <script src="https://kit.fontawesome.com/518be8d87f.js" crossorigin="anonymous"></script>
+	
+</head>
+<header>
+    <div class="div1">
+        <h1> <img src="static/img/logo2.png" alt="logo Avengers" width=40 height=30> Bem vindo ao projeto novos vingadores</h1>
+    </div>
+</header>
+<body class="background">
+    <div class="div1">
+        <p>Nossa inteligência captou uma conversa do império Skrull arquitetando uma possível invasão à terra.
+            Precisamos ajudar o diretor "Seu Jams Fury" na próxima iniciativa vingadores.
+        </p>
+        <p>Monte sua equipe de vingadores, escolhendo entre os mais variados herois da marvel e monte a 
+            equipe perfeita para acabar de uma vez por todas com a ameaça Skrull.</p>
+        <p>Clique em <strong>Herois</strong> para visualisar os herois disponiveis e inseri-los em uma equipe, 
+			em <strong>Candidatos</strong> para vizualizar a lista de candidados, <strong>Vingadores</strong> 
+			para acessar a atual equipe de vingadores ou clique em <strong>Strategi</strong> para acessar o time 
+			de Vingadores Strategi
+        </p>
+		<div class="divbutton"><a href = "{{ url_for('heroes') }}"><button class="button-49" role="button">Herois</button></a></div>
+		<div class="divbutton"><a href = "{{ url_for('select') }}"><button class="button-49" role="button">Candidatos</button></a></div>
+		<div class="divbutton"><a href = "{{ url_for('teams') }}"><button class="button-49" role="button">Vingadores</button></a></div>
+        <div class="divbutton"><a href = "{{ url_for('teams2') }}"><button class="button-49" role="button">Strategi</button></a></div>
+        
+    </div>
+	<footer>
+		<div class="main-content">
+			<div class="left box">
+				<h2><strong>Sobre</strong></h2>
+				<div class="content">
+					<p>Me chamo Nicolas Gomes de Souza Reis, tenho 32 anos e atualmente estou no ultimo periodo do curso
+                        de Analise e desenvolvimento de sistemas na Universidade Potiguar</p>
+				
+					<div class="social">
+						<a href="https://www.linkedin.com/in/nicolas-reis-b9795a21b/" target="_blank"><span class="fab fa-linkedin"></span></a>
+						<a href="https://github.com/NicolasGSR" target="_blank"><span class="fab fa-github"></span></a>
+					</div>
+				</div>
+			</div><!--left box-->
+			<div class="center box">
+				<h2><strong>Contato</strong></h2>
+				<div class="content">
+					
+
+					<div class="phone">
+						<span class="fas fas fa-phone-alt"></span>
+						<span class="text">+55 99 9999-9999</span>
+					</div>
+
+					<div class="email">
+						<span class="fas fa-envelope"></span>
+						<span class="text">nicolasgosore@gmail.com</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="center">
+				<span class="credit">Criado por Nicolas Gomes de Souza Reis</a></span>
+				<span class="far fa-copyright"> 2023</span>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

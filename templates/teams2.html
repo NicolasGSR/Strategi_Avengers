@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>New avengers project</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='mystyle.css') }}">
+        <script src="https://kit.fontawesome.com/518be8d87f.js" crossorigin="anonymous"></script>
+    </head>
+    <header>
+        <div class="div1">
+            <h1> <img src="static/img/logo2.png" alt="logo Avengers" width=40 height=30> Vingadores Strategi</h1>
+        </div>
+    </header>
+    <body class="background">
+    </div>
+    <div class="row row-cols-1 row-cols-md-3">
+        {% for hero in equipe %}
+            <div class="card mb-4" style="width: 20rem;">
+                <form action="/selecting" method="post">
+                    <fieldset style="border-color: transparent;">
+                        <div class="form-group">
+                            <img src="{{ hero.picture }}" class="card-img-top" style="object-fit: cover; height: 16rem; margin-top: 10px;" alt="{{ hero.name }}">
+                            <input type="hidden" value="{{ hero.picture }}" id="picture" name="picture" class="form-control">
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <h5 class="card-title"><input type="hidden" value="{{ hero.name }}" id="name" name="name" class="form-control">{{ hero.name }}</h5>
+                            </div>
+                            <div class="form-group">
+                                <p class="card-text" style="object-fit: cover; height: 10rem;"><input type="hidden" value="{{ hero.description }}" id="description" name="description" class="form-control">{{ hero.description }}</p>
+                            </div>
+                            <div class="form-group buttons">
+                                <a class="btn btn-danger" href = "{{ url_for('delete3', id = hero.id) }}">Remover</a>
+                                <a class="btn btn-danger" href = "{{ url_for('transferir2', id = hero.id) }}">Transferir</a>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        {% endfor %}
+        <div class="divbutton"><a href = "{{ url_for('home') }}"><button class="button-49" role="button">Home</button></a></div>
+        <div class="divbutton"><a href = "{{ url_for('teams') }}"><button class="button-49" role="button">Vingadores</button></a></div>
+    </div>
+        <footer>
+            <div class="bottom">
+                <div class="center">
+                    <span class="credit">Criado por Nicolas Gomes de Souza Reis</a></span>
+                    <span class="far fa-copyright"> 2023</span>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
