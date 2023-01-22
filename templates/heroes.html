@@ -13,7 +13,6 @@
         </div>
     </header>
     <body class="background">
-        <div class="divbutton"><a href = "{{ url_for('select') }}"><button class="button-49" role="button" style="float: right; margin-right: 20px;">Candidatos</button></a></div>
         <div class="box">
             <form name="search" action="/search" method="post">
                 <input type="text" class="form-control form-visual" id="search" name="search" onmouseout="this.value = ''; this.blur();">
@@ -46,6 +45,7 @@
                 </div>
             {% endfor %}
             <div class="divbutton"><a href = "{{ url_for('home') }}"><button class="button-49" role="button">Home</button></a></div>
+            <div class="divbutton"><a href = "{{ url_for('select') }}"><button class="button-49" role="button">Candidatos</button></a></div>
         </div>
             
             
