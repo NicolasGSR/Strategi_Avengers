@@ -1191,6 +1191,7 @@ footer{
   height: 30px;
   width: 72px;
   font-size: small;
+  display: inline-block;
 }
 .btn-danger2:hover {
   color: #fff;

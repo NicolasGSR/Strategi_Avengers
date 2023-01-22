@@ -30,9 +30,9 @@
                                 <p class="card-text" style="object-fit: cover; height: 10rem;"><input type="hidden" value="{{ hero.description }}" id="description" name="description" class="form-control">{{ hero.description }}</p>
                             </div>
                             <div class="form-group buttons">
-                                <a class="btn btn-danger" href = "{{ url_for('avengers', id = hero.id) }}">Vingadores</a>
-                                <a class="btn btn-danger" href = "{{ url_for('equipe', id = hero.id) }}">Strategi</a>
-                                <a class="btn btn-danger" href = "{{ url_for('delete', id = hero.id) }}">Deletar</a>
+                                <a class="btn btn-danger2" href = "{{ url_for('avengers', id = hero.id) }}">Vingadores</a>
+                                <a class="btn btn-danger2" href = "{{ url_for('equipe', id = hero.id) }}">Strategi</a>
+                                <a class="btn btn-danger2" href = "{{ url_for('delete', id = hero.id) }}">Deletar</a>
                             </div>
                         </div>
                     </fieldset>
