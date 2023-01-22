@@ -1191,7 +1191,8 @@ footer{
   height: 30px;
   width: 72px;
   font-size: small;
-  display: inline-block;
+  display: inline-flex;
+  position: relative;
 }
 .btn-danger2:hover {
   color: #fff;
