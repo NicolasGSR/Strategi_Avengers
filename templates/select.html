@@ -13,29 +13,32 @@
         </div>
     </header>
     <body class="background">
-        
-        <table class="table table-striped table-responsive table-bordered">
-            <thead class="thead-default">
-                <tr>
-                    <th>Nome</th>
-                    <th>Opções</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for hero in heroes %}
-                <tr>
-                    <th><img src="{{ hero.picture }}" class="card-img-top" style="object-fit: cover; height: 16rem; margin-top: 10px;" alt="{{ hero.name }}"></th>
-                    <th>{{ hero.name }}</th>
-                    <th>{{ hero.description }}</th>
-                    <th>
-                        <a class="btn btn-danger" href = "{{ url_for('avengers', id = hero.id) }}">Vingadores</a>
-                        <a class="btn btn-danger" href = "{{ url_for('equipe', id = hero.id) }}">Strategi</a>
-                        <a class="btn btn-danger" href = "{{ url_for('delete', id = hero.id) }}">Deletar</a>
-                    </th>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+    <div class="row row-cols-1 row-cols-md-3">
+        {% for hero in heroes %}
+            <div class="card mb-4" style="width: 20rem;">
+                <form action="/selecting" method="post">
+                    <fieldset style="border-color: transparent;">
+                        <div class="form-group">
+                            <img src="{{ hero.picture }}" class="card-img-top" style="object-fit: cover; height: 16rem; margin-top: 10px;" alt="{{ hero.name }}">
+                            <input type="hidden" value="{{ hero.picture }}" id="picture" name="picture" class="form-control">
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <h5 class="card-title"><input type="hidden" value="{{ hero.name }}" id="name" name="name" class="form-control">{{ hero.name }}</h5>
+                            </div>
+                            <div class="form-group">
+                                <p class="card-text" style="object-fit: cover; height: 10rem;"><input type="hidden" value="{{ hero.description }}" id="description" name="description" class="form-control">{{ hero.description }}</p>
+                            </div>
+                            <div class="form-group buttons">
+                                <a class="btn btn-danger" href = "{{ url_for('avengers', id = hero.id) }}">Vingadores</a>
+                                <a class="btn btn-danger" href = "{{ url_for('equipe', id = hero.id) }}">Strategi</a>
+                                <a class="btn btn-danger" href = "{{ url_for('delete', id = hero.id) }}">Deletar</a>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        {% endfor %}
         <div class="divbutton"><a href = "{{ url_for('heroes') }}"><button class="button-49" role="button">Herois</button></a></div>
         <div class="divbutton"><a href = "{{ url_for('home') }}"><button class="button-49" role="button">Home</button></a></div>
         <footer>
