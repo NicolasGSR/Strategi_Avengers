@@ -13,7 +13,14 @@
         </div>
     </header>
     <body class="background">
-    </div>
+        <div class="div1">
+            <p>Gerencie a equipe Vingadores, clique em <strong>Transferir</strong> para enviar o heroi a 
+                equipe dos Vingadores Strategi ou em <strong>Deletar</strong> para remover o heroi da equipe.
+                Clique em <strong>Home</strong> para voltar a pagina inicial ou em <strong>Strategi</strong> para 
+                ir a pagina de gerenciamento da equipe de Vingadores Strategi.
+            <div class="divbutton"><a href = "{{ url_for('home') }}"><button class="button-49" role="button">Home</button></a></div>
+            <div class="divbutton"><a href = "{{ url_for('teams2') }}"><button class="button-49" role="button">Strategi</button></a></div>
+        </div>
     <div class="row row-cols-1 row-cols-md-3">
         {% for hero in avengers %}
             <div class="card mb-4" style="width: 20rem;">
@@ -39,8 +46,6 @@
                 </form>
             </div>
         {% endfor %}
-        <div class="divbutton"><a href = "{{ url_for('home') }}"><button class="button-49" role="button">Home</button></a></div>
-        <div class="divbutton"><a href = "{{ url_for('teams2') }}"><button class="button-49" role="button">Strategi</button></a></div>
     </div>
         <footer>
             <div class="bottom">

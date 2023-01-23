@@ -13,6 +13,16 @@
         </div>
     </header>
     <body class="background">
+        <div class="div1">
+            <p>Gerencie a lista de possiveis candidatos, clique em <strong>Avengers</strong> para enviar o heroi a 
+                equipe dos Vingadores, <strong>Strategi</strong> para enviar o heroi a equipe dos Vingadores Strategi,
+                ou em <strong>Deletar</strong> para remover o heroi da lista de possiveis candidatos.
+                Clique em <strong>Home</strong> para voltar a pagina inicial ou em <strong>Herois</strong> para 
+                pesquisar por novos herois.
+            </p>
+            <div class="divbutton"><a href = "{{ url_for('heroes') }}"><button class="button-49" role="button">Herois</button></a></div>
+        <div class="divbutton"><a href = "{{ url_for('home') }}"><button class="button-49" role="button">Home</button></a></div>
+        </div>
     <div class="row row-cols-1 row-cols-md-3">
         {% for hero in heroes %}
             <div class="card mb-4" style="width: 20rem;">
@@ -39,8 +49,6 @@
                 </form>
             </div>
         {% endfor %}
-        <div class="divbutton"><a href = "{{ url_for('heroes') }}"><button class="button-49" role="button">Herois</button></a></div>
-        <div class="divbutton"><a href = "{{ url_for('home') }}"><button class="button-49" role="button">Home</button></a></div>
         <footer>
             <div class="bottom">
                 <div class="center">

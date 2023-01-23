@@ -13,6 +13,15 @@
         </div>
     </header>
     <body class="background">
+        <div class="div1">
+            <p>Escolha entre uma lista de herois, ou pesquise por herois especificos, 
+                então clique em <strong>Selecionar</strong> para enviar o heroi a uma lista de possiveis candidados.
+                Clique em <strong>Home</strong> para voltar a pagina inicial ou em <strong>Candidatos</strong> para 
+                acessar a lista de possiveis candidatos.
+            </p>
+            <div class="divbutton"><a href = "{{ url_for('home') }}"><button class="button-49" role="button">Home</button></a></div>
+            <div class="divbutton"><a href = "{{ url_for('select') }}"><button class="button-49" role="button">Candidatos</button></a></div>
+        </div>
         <div class="box">
             <form name="search" action="/search" method="post">
                 <input type="text" class="form-control form-visual" id="search" name="search" onmouseout="this.value = ''; this.blur();">
@@ -44,8 +53,6 @@
                     </form>
                 </div>
             {% endfor %}
-            <div class="divbutton"><a href = "{{ url_for('home') }}"><button class="button-49" role="button">Home</button></a></div>
-            <div class="divbutton"><a href = "{{ url_for('select') }}"><button class="button-49" role="button">Candidatos</button></a></div>
         </div>
             
             
